@@ -19,3 +19,4 @@ install:
   - ./travis-tool.sh aptget_install texlive-luatex
   - ./travis-tool.sh aptget_install pandoc-citeproc
   - ./travis-tool.sh aptget_install etoolbox
+  - ./travis-tool.sh aptget_install texlive-latex-extra
