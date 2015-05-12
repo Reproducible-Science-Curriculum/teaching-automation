@@ -1,9 +1,16 @@
-all: manuscript.html manuscript.pdf
+all: manuscript-inline.html manuscript-inline.pdf manuscript-functional.html manuscript-functional.pdf
 
-manuscript.html: manuscript.Rmd
+manuscript-inline.html: manuscript-inline.Rmd
 	Rscript -e "library(rmarkdown); library(knitr); render('$<', 'html_document')"
 
-manuscript.pdf: manuscript.Rmd
+manuscript-inline.pdf: manuscript-inline.Rmd
 	Rscript -e "library(rmarkdown); library(knitr); render('$<', 'pdf_document')"
+
+manuscript-functional.html: manuscript-functional.Rmd
+	Rscript -e "library(rmarkdown); library(knitr); render('$<', 'html_document')"
+
+manuscript-functional.pdf: manuscript-functional.Rmd
+	Rscript -e "library(rmarkdown); library(knitr); render('$<', 'pdf_document')"
+
 
 .PHONY: all
