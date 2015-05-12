@@ -1,4 +1,4 @@
-
+[![Build Status](https://travis-ci.org/fmichonneau/teaching-automation.svg)](https://travis-ci.org/fmichonneau/teaching-automation)
 
 # Teaching automation
 
