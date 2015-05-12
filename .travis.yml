@@ -12,3 +12,10 @@ before_install:
 
 install:
   - ./travis-tool.sh install_deps
+  - ./travis-tool.sh aptget_install pandoc
+  - ./travis-tool.sh aptget_install pandoc-citeproc
+  - ./travis-tool.sh aptget_install texlive-latex-recommended
+  - ./travis-tool.sh aptget_install texlive-xetex
+  - ./travis-tool.sh aptget_install texlive-luatex
+  - ./travis-tool.sh aptget_install pandoc-citeproc
+  - ./travis-tool.sh aptget_install etoolbox
