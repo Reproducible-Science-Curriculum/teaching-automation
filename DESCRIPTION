@@ -1,1 +1,1 @@
-Depends: dplyr, knitr, rmarkdown
+Depends: dplyr, knitr, rmarkdown, ggplot2
