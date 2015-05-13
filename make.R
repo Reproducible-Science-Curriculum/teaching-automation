@@ -69,9 +69,12 @@ clean_ms <- function() {
 make_tests <- function() {
     if (require(testthat)) {
         p <- test_dir("tests/")
-    }
-    if (!interactive() && !any(p$error)) {
-        q("no", status = 1, FALSE)
+        if (!interactive() && any(p$failed)) {
+            q("no", status = 1, FALSE)
+        }
+    } else {
+        message("skipped the tests, testthat not available.")
+        return(NULL)
     }
 }
 
