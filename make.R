@@ -64,12 +64,20 @@ clean_ms <- function() {
     invisible(res)
 }
 
+### Tests ----------------------------------------
+
+make_tests <- function() {
+    if (require(testthat)) {
+        test_dir("tests/")
+    }
+}
 
 ### Everything -----------------------------------
 
 make_all <- function() {
     make_data()
     make_figures()
+    make_tests()
     make_ms()
 }
 
