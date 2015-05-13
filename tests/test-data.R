@@ -10,7 +10,7 @@ test_that("mean life expectancy has correct dimensions", {
               gdp <- gather_gdp_data()
               setwd(owd)
               expect_equal(nrow(get_mean_lifeExp(gdp)),
-                           5 * length(unique(gdp$year))+1)
+                           5 * length(unique(gdp$year)))
           })
 
 context("get coef before after")
