@@ -68,7 +68,10 @@ clean_ms <- function() {
 
 make_tests <- function() {
     if (require(testthat)) {
-        test_dir("tests/")
+        p <- test_dir("tests/")
+    }
+    if (!interactive() && !any(p$error)) {
+        q("no", status = 1, FALSE)
     }
 }
 
