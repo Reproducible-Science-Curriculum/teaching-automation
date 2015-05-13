@@ -15,7 +15,7 @@ address <- "your address"
 email <- "your email"
 ```
 
-# Increase in life expectency through time: a continental analysis
+# Increase in life expectancy through time: a continental analysis
 
 > By `r last_name`, `r first_name`
 >
@@ -23,7 +23,7 @@ email <- "your email"
 >
 > Email: `r email`
 
-In this paper, we will examine the change in life expectency through time across
+In this paper, we will examine the change in life expectancy through time across
 the five continents.
 
 ```{r summary}
