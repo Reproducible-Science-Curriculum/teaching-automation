@@ -105,7 +105,7 @@ coef_before_after <- rbind(
     coef_before_after_oce)
 coef_before_after <- as.data.frame(coef_before_after)
 names(coef_before_after) <- c("continent", "period", "trend")
-coef_before_after$trend <- as.numeric(coef_before_after$trend)
+coef_before_after$trend <- as.numeric(levels(coef_before_after$trend)[coef_before_after$trend])
 coef_before_after$period <- factor(coef_before_after$period, levels = c("before", "after"))
 ```
 

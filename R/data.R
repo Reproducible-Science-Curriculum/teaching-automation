@@ -32,7 +32,7 @@ get_coef_before_after <- function(mean_lifeExp, year_break) {
                                 }) %>%
       do.call("rbind", .) %>% as.data.frame %>%
       setNames(c("continent", "period", "trend"))
-    coef_before_after$trend <- as.numeric(coef_before_after$trend)
+    coef_before_after$trend <- as.numeric(levels(coef_before_after$trend)[coef_before_after$trend])
     coef_before_after$period <- factor(coef_before_after$period, levels = c("before", "after"))
     coef_before_after
 }
