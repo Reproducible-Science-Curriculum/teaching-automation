@@ -7,7 +7,7 @@ manuscript-functional.pdf: manuscript-functional.Rmd
 	Rscript -e "library(rmarkdown); library(knitr); render('$<', 'pdf_document')"
 
 test:
-	Rscript -e "library(testthat); source('make.R'); test_dir('tests/')"
+	Rscript -e "library(testthat); source('make.R'); make_tests()"
 
 manuscripts: manuscript-inline.pdf manuscript-functional.pdf
 
