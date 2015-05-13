@@ -3,6 +3,7 @@ opts_chunk$set(echo = FALSE)
 source("R/data.R")
 source("R/figures.R")
 source("R/utils.R")
+source("R/dependencies.R")
 source("R/manuscript_options.R")
 ```
 

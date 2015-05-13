@@ -1,11 +1,6 @@
 ## load all the functions in memory
 invisible(sapply(list.files(path = "R", pattern = "R$", full.names = TRUE), source))
 
-## load needed packages
-library(dplyr)
-library(ggplot2)
-library(knitr)
-
 ### Data -----------------------------------------
 
 make_data <- function(path = manuscript_options()$data_output, verbose = TRUE) {
