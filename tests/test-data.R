@@ -1,14 +1,13 @@
 context("gdp data")
 test_that("gather_gdp_data() includes all files", {
-          expect_equal(length(list.files(path = "data-raw", pattern = "gdp-percapita\\.csv$")),
-                       length(unique(gather_gdp_data()$country)))
-      })
+              expect_true(nrow(gather_gdp_data(path = "../data-raw")) > 100 )
+              expect_equal(length(list.files(path = "../data-raw", pattern = "gdp-percapita\\.csv$")),
+                           length(unique(gather_gdp_data(path = "../data-raw")$country)))
+          })
 
 context("mean life exp")
 test_that("mean life expectancy has correct dimensions", {
-              owd <- setwd("..")
-              gdp <- gather_gdp_data()
-              setwd(owd)
+              gdp <- gather_gdp_data(path = "../data-raw")
               expect_equal(nrow(get_mean_lifeExp(gdp)),
                            5 * length(unique(gdp$year)))
           })

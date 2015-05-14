@@ -1,5 +1,5 @@
-gather_gdp_data <- function() {
-    split_gdp_files <- list.files(path = "data-raw", pattern = "gdp-percapita\\.csv$", full.names = TRUE)
+gather_gdp_data <- function(path = "data-raw") {
+    split_gdp_files <- list.files(path = path, pattern = "gdp-percapita\\.csv$", full.names = TRUE)
     split_gdp_list <- lapply(split_gdp_files, read.csv)
     gdp <- do.call("rbind", split_gdp_list)
     gdp
