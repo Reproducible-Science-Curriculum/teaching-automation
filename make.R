@@ -4,17 +4,17 @@ invisible(sapply(list.files(path = "R", pattern = "R$", full.names = TRUE), sour
 ### Data -----------------------------------------
 
 make_data <- function(path = manuscript_options()$data_output, verbose = TRUE) {
-    make_gdp_data()
+    make_gdp_data(path)
     make_mean_lifeExp_data()
 }
 
 make_gdp_data <- function(path = manuscript_options()$data_output) {
-    gdp <- gather_gdp_data()
+    gdp <- gather_gdp_data(path)
     make_csv(gdp, file = file.path(path, "gdp.csv"))
 }
 
 make_mean_lifeExp_data <- function(path = manuscript_options()$data_output) {
-    gdp <- gather_gdp_data()
+    gdp <- gather_gdp_data(path)
     make_csv(get_mean_lifeExp(gdp), file = file.path(path, "mean_lifeExp.csv"))
 }
 
