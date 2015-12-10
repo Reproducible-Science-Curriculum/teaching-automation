@@ -86,6 +86,15 @@ involves writing tests before the code.
 
 ### Build a Makefile
 
+Running and testing individual functions gets compicated fast so start a 
+Makefile now that can run entire sections of the project at once rather than 
+waiting until later. It will also document the order of what needs to happen
+when and help you split the project in to groups of tasks.
+
+This project has two parts to the Makefile: ''/Makefile'' that is used with the
+Unix program '''make''' and ''/make.R'' which provides 
+
+* This is discussed in 
 
 ### Add a Travis Badge
 
