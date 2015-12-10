@@ -1,4 +1,6 @@
-[![Build Status](https://travis-ci.org/reproducible-science-curriculum/teaching-automation.svg)](https://travis-ci.org/reproducible-science-curriculum/teaching-automation)
+
+[![Build Status](https://travis-ci.org/Reproducible-Science-Curriculum/teaching-automation.svg)](https://travis-ci.org/Reproducible-Science-Curriculum/teaching-automation)
+
 
 # Teaching automation
 
@@ -23,7 +25,7 @@ can add one later in a ''/LICENSE'' file.
 ## Keeping notes in README.md (this file)
 
 Throughout the development process, keep a README.md file open and document the
-process and outputs of your work directly in the repository. This keeps your 
+process and outputs of your work directly in the repository. This keeps your
 notes with your code instead of in Word documents on your computer or Evernote
 or some other place that no one else can access.
 
@@ -34,7 +36,7 @@ information people need to reproduce your work.
 
 ## Downloading Raw Data
 
-The raw data is kept in a subdirectory called ''/data-raw''. Also in this 
+The raw data is kept in a subdirectory called ''/data-raw''. Also in this
 directory is a README.md file that contains a detailed description of where this
 data came from and the process used to collect it.
 
@@ -82,19 +84,19 @@ Some people choose to use a process called '''test driven development''' which
 involves writing tests before the code.
 
 * This is discussed in the testing slides.
-* Ref: 
+* Ref:
 
 ### Build a Makefile
 
-Running and testing individual functions gets compicated fast so start a 
-Makefile now that can run entire sections of the project at once rather than 
+Running and testing individual functions gets compicated fast so start a
+Makefile now that can run entire sections of the project at once rather than
 waiting until later. It will also document the order of what needs to happen
 when and help you split the project in to groups of tasks.
 
 This project has two parts to the Makefile: ''/Makefile'' that is used with the
-Unix program '''make''' and ''/make.R'' which provides 
+Unix program '''make''' and ''/make.R'' which provides
 
-* This is discussed in 
+* This is discussed in
 
 ### Add a Travis Badge
 
@@ -125,4 +127,3 @@ Some options for the analysis, formatting, output types, etc may be things you
 want to make it easy to change often. Those parameters can be separated out in
 to a file either in a text format like YAML or JSON or, in this case, just
 another R script ''R/manuscript_options.R'' that defines an options list.
-
